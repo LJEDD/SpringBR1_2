@@ -22,6 +22,11 @@ public class RestApiController {
 
     private final UserService userService;
 
+    @GetMapping("/")
+    public String mainPage() {
+        return "index";
+    }
+
     @Autowired
     public RestApiController(RoleService roleService, UserService userService) {
         this.userService = userService;
